@@ -8,13 +8,10 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './food-item.component.html',
   styleUrls: ['./food-item.component.css']
 })
-export class FoodItemComponent implements OnInit {
+export class FoodItemComponent {
 
   constructor(private cartService: CartService, private route: ActivatedRoute) { }
-  ngOnInit(): void {
-    // this.routeName = this.route
-    console.log(this.route);
-  }
+
   @Input() foodItem!: FoodItem;
 
   routeName: string = this.route.snapshot.title!;

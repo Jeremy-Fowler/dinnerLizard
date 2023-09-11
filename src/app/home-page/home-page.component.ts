@@ -9,7 +9,7 @@ import { AppStateService } from '../app-state.service';
 export class HomePageComponent implements OnInit {
   constructor(private AppState: AppStateService) { }
   ngOnInit(): void {
-    const foods = ['nachos', 'hamburgers', 'raviolis']
+    const foods = ['nachos', 'hamburgers', 'raviolis', 'cheese and crackers', 'sub sandwiches']
     const randomIndex = Math.floor(Math.random() * foods.length)
     this.food = foods[randomIndex]
   }

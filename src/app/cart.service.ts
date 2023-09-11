@@ -6,13 +6,13 @@ import { AppStateService } from './app-state.service';
   providedIn: 'root'
 })
 export class CartService {
-  removeItemFromCart(foodItem: FoodItem) {
+  constructor(private AppState: AppStateService) { }
+  removeItemFromCart(foodItem: FoodItem): void {
     const index = this.AppState.cartItems.findIndex(item => item == foodItem)
     if (index == -1) throw new Error("Item not found")
     this.AppState.cartItems.splice(index, 1)
   }
-  constructor(private AppState: AppStateService) { }
-  addItemToCart(foodItem: FoodItem) {
+  addItemToCart(foodItem: FoodItem): void {
     this.AppState.cartItems.push(foodItem)
   }
 

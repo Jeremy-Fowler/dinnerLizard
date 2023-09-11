@@ -5,8 +5,8 @@
       <span>
         {{foodItem.name}}
       </span>
-      <i *ngIf="foodItem.diet.isGlutenFree" class="mdi mdi-barley-off text-warning"></i>
-      <i *ngIf="foodItem.diet.isVegan" class="mdi mdi-food-steak-off text-danger"></i>
+      <i *ngIf="foodItem.diet.isGlutenFree" title="Gluten Free" class="mdi mdi-barley-off text-warning"></i>
+      <i *ngIf="foodItem.diet.isVegan" title="Meat Free" class="mdi mdi-food-steak-off text-danger"></i>
     </h3>
     <h4>
       {{foodItem.price | currency}}

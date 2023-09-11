@@ -10,17 +10,17 @@ import { FoodItem } from '../interfaces/FoodItem';
 export class CartPageComponent implements OnInit {
   constructor(private AppState: AppStateService) { }
 
-  cartItems: FoodItem[] = this.AppState.cartItems;
+  cartItems: FoodItem[] = this.AppState.cartItems
 
   ngOnInit(): void {
     this.AppState.cartItems.sort((a, b) => {
       if (a.name < b.name) {
-        return -1;
+        return -1
       }
       if (a.name > b.name) {
-        return 1;
+        return 1
       }
-      return 0;
+      return 0
     });
   }
 
