@@ -1,0 +1,18 @@
+h1{
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+.hero{
+  min-height: 70vh;
+  background-image: url(https://images.unsplash.com/photo-1559739354-74b5a6d4e5f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80);
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+.card-img-top{
+  height: 30vh;
+  width: 100%;
+  object-fit: cover;
+}

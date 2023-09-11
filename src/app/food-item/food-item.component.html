@@ -1,0 +1,26 @@
+<div class="card">
+  <img [src]="foodItem.imgUrl" [alt]="foodItem.name" class="card-img-top">
+  <div class="p-3">
+    <h3>
+      <span>
+        {{foodItem.name}}
+      </span>
+      <i *ngIf="foodItem.diet.isGlutenFree" class="mdi mdi-barley-off text-warning"></i>
+      <i *ngIf="foodItem.diet.isVegan" class="mdi mdi-food-steak-off text-danger"></i>
+    </h3>
+    <h4>
+      {{foodItem.price | currency}}
+    </h4>
+
+    <button *ngIf="routeName == 'Restaurant'; else showDelete" (click)="addItemToCart()" class="btn btn-info">
+      Add to cart <i class="mdi mdi-cart-plus"></i>
+    </button>
+
+    <ng-template #showDelete>
+      <button (click)="removeItemFromCart()" class="btn btn-danger">
+        Remove from cart <i class="mdi mdi-cart-remove"></i>
+      </button>
+    </ng-template>
+
+  </div>
+</div>

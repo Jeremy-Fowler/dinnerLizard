@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 p-5">
+      <h1>
+        <span>{{restaurant.name}}</span>
+        <i *ngIf="restaurant.isGhostKitchen" class="mdi mdi-ghost ms-2"></i>
+      </h1>
+      <p class="fs-3">{{restaurant.hours.open}} - {{restaurant.hours.closed}}</p>
+    </div>
+    <div class="col-md-8 p-5">
+      <img [src]="restaurant.imgUrl" [alt]="restaurant.name" class="img-fluid rounded shadow">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 ps-5 mb-3">
+      <h2>Menu</h2>
+    </div>
+    <div *ngFor="let item of foodItems" class="col-md-3">
+      <app-food-item [foodItem]="item"></app-food-item>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h1>Cart</h1>
+      <h2>Total: {{total | currency}}</h2>
+    </div>
+    <div *ngFor="let item of cartItems" class="col-md-3">
+      <app-food-item [foodItem]="item"></app-food-item>
+    </div>
+  </div>
+</div>
